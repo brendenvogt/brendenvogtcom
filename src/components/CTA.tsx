@@ -64,9 +64,9 @@ export default function CallToActionWithVideo() {
               size={"lg"}
               fontWeight={"normal"}
               px={6}
-              colorScheme={"red"}
+              colorScheme={"brand"}
               bg={"brand.700"}
-              _hover={{ bg: "red.500" }}
+              _hover={{ bg: "brand.900" }}
             >
               Get started
             </Button>
