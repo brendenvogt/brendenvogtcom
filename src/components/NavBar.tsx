@@ -15,12 +15,7 @@ import {
   useBreakpointValue,
   useDisclosure,
 } from "@chakra-ui/react";
-import {
-  HamburgerIcon,
-  CloseIcon,
-  ChevronDownIcon,
-  ChevronRightIcon,
-} from "@chakra-ui/icons";
+import { HamburgerIcon, CloseIcon, ChevronDownIcon } from "@chakra-ui/icons";
 
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
@@ -87,10 +82,10 @@ export default function WithSubnavigation() {
             fontSize={"sm"}
             fontWeight={600}
             color={"white"}
-            bg={"pink.400"}
+            bg={"brand.700"}
             href={"#"}
             _hover={{
-              bg: "pink.300",
+              bg: "brand.900",
             }}
           >
             Sign Up
@@ -162,13 +157,13 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
       display={"block"}
       p={2}
       rounded={"md"}
-      _hover={{ bg: useColorModeValue("pink.50", "gray.900") }}
+      _hover={{ bg: useColorModeValue("gray.50", "gray.900") }}
     >
       <Stack direction={"row"} align={"center"}>
         <Box>
           <Text
             transition={"all .3s ease"}
-            _groupHover={{ color: "pink.400" }}
+            _groupHover={{ color: "gray.400" }}
             fontWeight={500}
           >
             {label}
@@ -183,9 +178,7 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
           justify={"flex-end"}
           align={"center"}
           flex={1}
-        >
-          <Icon color={"pink.400"} w={5} h={5} as={ChevronRightIcon} />
-        </Flex>
+        ></Flex>
       </Stack>
     </Link>
   );
@@ -267,7 +260,7 @@ interface NavItem {
 
 const NAV_ITEMS: Array<NavItem> = [
   {
-    label: "Inspiration",
+    label: "Topic 1",
     children: [
       {
         label: "Explore Design Work",
@@ -282,12 +275,12 @@ const NAV_ITEMS: Array<NavItem> = [
     ],
   },
   {
-    label: "Find Work",
+    label: "Topic 2",
     children: [
       {
         label: "Job Board",
         subLabel: "Find your dream design job",
-        href: "#",
+        href: "/job",
       },
       {
         label: "Freelance Projects",
@@ -298,10 +291,10 @@ const NAV_ITEMS: Array<NavItem> = [
   },
   {
     label: "Learn Design",
-    href: "#",
+    href: "/learn",
   },
   {
     label: "Hire Designers",
-    href: "#",
+    href: "/hire",
   },
 ];
