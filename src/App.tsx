@@ -2,6 +2,8 @@ import "./App.css";
 import WithSubnavigation from "./components/NavBar";
 import CallToActionWithVideo from "./components/CTA";
 import SmallWithLogoLeft from "./components/Footer";
+import PersonCard from "./components/PersonCard";
+import { Container, Heading, Spacer, Stack } from "@chakra-ui/react";
 
 function App() {
   return (
@@ -10,6 +12,21 @@ function App() {
         <div className="content">
           <WithSubnavigation />
           <CallToActionWithVideo />
+          <Container maxW={"5xl"}>
+            <Heading>Meet the team...</Heading>
+            <Stack
+              align={"center"}
+              spacing={{ base: 8, md: 10 }}
+              py={{ base: 5, md: 7 }}
+              direction={{ base: "column", md: "row" }}
+            >
+              <PersonCard />
+              <Spacer />
+              <PersonCard />
+              <Spacer />
+              <PersonCard />
+            </Stack>
+          </Container>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
             dapibus, nulla et congue dignissim, elit turpis ullamcorper risus,
