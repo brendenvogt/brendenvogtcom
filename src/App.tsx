@@ -1,5 +1,3 @@
-import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import WithSubnavigation from "./components/NavBar";
 import CallToActionWithVideo from "./components/CTA";
